@@ -20,7 +20,6 @@ export default function AlbumCard() {
         </div>
       </div>
     </div>
-    
     </>
   )
 }

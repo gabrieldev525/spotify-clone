@@ -5,6 +5,6 @@ import AlbumCard from '../../components/album-card'
 
 export default function Home() {
   return (
-    <AlbumCard></AlbumCard>
+    <h1>Home</h1>
   )
 }
