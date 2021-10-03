@@ -1,0 +1,119 @@
+@import '../../../styles/variables.scss';
+
+#container_menu_side {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 100%;
+  padding-top: 1%;
+  padding-left: 2%;
+  background-color: $color-black;
+
+  .container_navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    .more_options {
+      cursor: pointer;
+    }
+
+    .container_nav_platform {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .content_all_item_nav {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        padding: 2% 0px;
+        color: $color-gray-text;
+        transition: all 0.25s;
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+  }
+
+  .container_playlist_collections {
+    display: flex;
+    flex-direction: column;
+    margin: 2% 0px;
+    padding-bottom: 2%;
+    gap: 6px;
+    width: 85%;
+    border-bottom: 1px solid #b9bbba;
+
+    .content_all_playlist_collections {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 2% 0px;
+      color: $color-gray-text;
+      transition: all 0.24s;
+
+      &:hover {
+        color: $color-white;
+      }
+    }
+
+    .icon_container_all_collection {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 30px;
+      width: 30px;
+      border-radius: 1px;
+      background-color: $color-gray-text;
+    }
+    .icon_like_music {
+      background: linear-gradient(135deg, #450af5, #c4efd9);
+    }
+  }
+
+  .container_music_collections {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #4d4d4d;
+      transition: all 0.24s;
+
+      &:hover {
+        background-color: #b9bbba;
+      }
+    }
+
+    .content_music {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      padding: 1% 0px;
+      width: 95%;
+      color: $color-gray-text;
+
+      p {
+        cursor: default;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        transition: 0.24;
+
+        &:hover {
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
