@@ -5,10 +5,11 @@
   flex-direction: column;
   width: 240px;
   padding: 1%;
+  margin: 2% auto;
   min-height: 310px;
   border-radius: 5px;
   background-color: $color-black-background-card;
-  transition: .24s;
+  transition: 0.24s;
 
   &:hover {
     cursor: pointer;
@@ -16,10 +17,11 @@
 
     .container_play_music {
       opacity: 1 !important;
+      bottom: 0 !important;
     }
   }
 
-  .container_img {
+  .container_image_artist {
     position: relative;
     display: flex;
     justify-content: center;
@@ -28,6 +30,7 @@
       width: 80%;
       filter: drop-shadow(0px 0px 10px rgb(23, 23, 23));
       border-radius: 50%;
+      object-fit: cover;
     }
 
     .container_play_music {
@@ -36,16 +39,21 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 25%;
-      height: 30%;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
       background-color: $color-green;
 
-      bottom: 0;
+      bottom: -20px;
       right: 30px;
 
-      transition: all .3s;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, .2));
+      transition: all 0.3s;
+      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
+
+      .icon_play {
+        margin-left: 5px;
+        color: $color-white !important;
+      }
     }
   }
 
