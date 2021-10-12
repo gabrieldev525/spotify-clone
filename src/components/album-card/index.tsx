@@ -2,11 +2,10 @@
 import React from 'react'
 
 //style
-import "./styles/styles.scss"
+import './styles/styles.scss'
 
 export default function AlbumCard() {
   return (
-    <>
     <div className="album-card">
       <div className="album-card-info">
         <img className="album-card-image" src="https://via.placeholder.com/150" alt="artist album photo" />
@@ -20,6 +19,5 @@ export default function AlbumCard() {
         </div>
       </div>
     </div>
-    </>
   )
 }
