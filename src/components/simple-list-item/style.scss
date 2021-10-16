@@ -1,0 +1,87 @@
+@import '../../styles/variables.scss';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: $color-gray-2;
+    transition: 0.1s;
+
+    &.active {
+        background-color: $color-gray-3 !important;
+
+        .left-content {
+            .position {
+                color: $color-white;
+            }
+        }
+
+        .total-plays {
+            color: $color-white;
+        }
+    }
+
+    &:hover {
+        background-color: $color-gray-4;
+
+        .total-plays {
+            color: $color-white;
+        }
+
+        .right-content {
+            .like-button, .menu-button {
+                visibility: visible;
+            }
+
+            .menu-button {
+                color: $color-white;
+            }
+        }
+    }
+
+    .left-content {
+        display: flex;
+        align-items: center;
+
+        .position {
+            margin-right: 1.5rem;
+            color: $color-gray-1;
+            font-size: 1.1rem;
+        }
+
+        .music-image {
+            width: 60px;
+            height: 60px;
+        }
+
+        .music-name {
+            margin-left: 1.5rem;
+            color: $color-white;
+            font-size: 1.1rem;
+        }
+    }
+
+    .right-content {
+        display: flex;
+        align-items: center;
+
+        .like-button, .menu-button {
+            visibility: hidden;
+            color: $color-gray-1;
+        }
+
+        .like-button:hover {
+            color: $color-white;
+        }
+
+        .time-duration {
+            margin: 0 2rem;
+        }
+    }
+
+    .total-plays, .time-duration {
+        color: $color-gray-1;
+    }
+
+}
