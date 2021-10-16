@@ -12,7 +12,7 @@ export default function ArtistCard({ image, title, category }: IArtistCardProps)
   return (
     <div id='container_main_card_artist'>
       <div className='container_image_artist'>
-        <img src={image} alt='Image do artista' />
+        <img src={`${image}`} alt='Image do artista' />
         <div className='container_play_music'>
           <IoPlaySharp className='icon_play' size={30} />
         </div>

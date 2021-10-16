@@ -1,5 +1,5 @@
 export interface IArtistCardProps {
-  image: string,
+  image: string | HTMLImageElement,
   title: string,
   category: string
 }
