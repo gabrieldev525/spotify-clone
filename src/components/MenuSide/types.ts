@@ -1,3 +1,8 @@
 export interface IMenuSideProps {
-  isFocus: boolean
+  data: Array<object> | object
+}
+
+export interface IDataProps {
+  id: number,
+  name: string
 }
