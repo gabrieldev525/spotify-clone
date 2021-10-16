@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #121212;
+    transition: 0.1s;
+
+    &.active {
+        background-color: #5A5A5A !important;
+
+        .left-content {
+            .position {
+                color: #fff;
+            }
+        }
+
+        .total-plays {
+            color: #fff;
+        }
+    }
+
+    &:hover {
+        background-color: #2A2A2A;
+
+        .total-plays {
+            color: #fff;
+        }
+
+        .right-content {
+            .like-button, .menu-button {
+                visibility: visible;
+            }
+
+            .menu-button {
+                color: #fff;
+            }
+        }
+    }
+
+    .left-content {
+        display: flex;
+        align-items: center;
+
+        .position {
+            margin-right: 1.5rem;
+            color: #b3b3b3;
+            font-size: 1.1rem;
+        }
+
+        .music-image {
+            width: 60px;
+            height: 60px;
+        }
+
+        .music-name {
+            margin-left: 1.5rem;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+    }
+
+    .right-content {
+        display: flex;
+        align-items: center;
+
+        .like-button, .menu-button {
+            visibility: hidden;
+            color: #b3b3b3;
+        }
+
+        .like-button:hover {
+            color: #fff;
+        }
+
+        .time-duration {
+            margin: 0 2rem;
+        }
+    }
+
+    .total-plays, .time-duration {
+        color: #b3b3b3;
+    }
+
+}
