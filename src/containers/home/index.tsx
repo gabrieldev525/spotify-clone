@@ -2,7 +2,12 @@
 import React from 'react'
 
 // Project
+import Image from '../../static/images/music.jpeg'
 import MenuSide from '../../components/MenuSide'
+import SimpleListItem from '../../components/simple-list-item'
+
+// Local
+import './styles.scss'
 
 export default function Home() {
   const api = [
@@ -31,9 +36,34 @@ export default function Home() {
   ]
 
   return (
-    <div style={{ display:  'flex', height: '100%' }}>
-      <MenuSide data={api} />
-      <h1>Home</h1>
-    </div>
+    <>
+      <div style={{ display:  'flex', height: '100%' }}>
+        <MenuSide data={api} />
+
+        <div className='main-container'>
+          <SimpleListItem
+            position={1}
+            musicName='Nome da música'
+            image={Image}
+            totalPlays='2,525,702'
+            timeDuration='2:27'
+            active={true} />
+
+          <SimpleListItem
+            position={1}
+            musicName='Nome da música'
+            image={Image}
+            totalPlays='2,525,702'
+            timeDuration='2:27' />
+
+          <SimpleListItem
+            position={1}
+            musicName='Nome da música'
+            image={Image}
+            totalPlays='2,525,702'
+            timeDuration='2:27' />
+        </div>
+      </div>
+    </>
   )
 }
