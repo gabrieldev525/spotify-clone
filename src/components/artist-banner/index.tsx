@@ -4,7 +4,6 @@ import React from 'react'
 // Local
 import { IArtistBanner } from './types'
 import './styles/styles.scss'
-import '../../styles/global.scss'
 
 export default function ArtistBanner({artistBannerImage, artistPlaylistName, artistMusicName, artistBannerName}: IArtistBanner) {
     return (
