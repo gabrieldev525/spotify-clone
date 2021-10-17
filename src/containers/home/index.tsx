@@ -8,6 +8,7 @@ import SimpleListItem from '../../components/simple-list-item'
 
 // Local
 import './styles.scss'
+import PlayerMusic from '../../components/player-music'
 
 export default function Home() {
   const api = [
@@ -36,8 +37,8 @@ export default function Home() {
   ]
 
   return (
-    <>
-      <div style={{ display:  'flex', height: '100%' }}>
+    <div className='home-container'>
+      <div className='content-page'>
         <MenuSide data={api} />
 
         <div className='main-container'>
@@ -47,7 +48,29 @@ export default function Home() {
             image={Image}
             totalPlays='2,525,702'
             timeDuration='2:27'
-            active={true} />
+            active={false} />
+
+          <SimpleListItem
+            position={1}
+            musicName='Nome da música'
+            image={Image}
+            totalPlays='2,525,702'
+            timeDuration='2:27' />
+
+          <SimpleListItem
+            position={1}
+            musicName='Nome da música'
+            image={Image}
+            totalPlays='2,525,702'
+            timeDuration='2:27' />
+
+          <SimpleListItem
+            position={1}
+            musicName='Nome da música'
+            image={Image}
+            totalPlays='2,525,702'
+            timeDuration='2:27'
+            active={false} />
 
           <SimpleListItem
             position={1}
@@ -64,6 +87,13 @@ export default function Home() {
             timeDuration='2:27' />
         </div>
       </div>
-    </>
+
+      <PlayerMusic
+        image={Image}
+        musicName='Nome da música'
+        musicArtist='Artista X'
+        currentMusicTime='2:30'
+        totalMusicTime='3:40' />
+    </div>
   )
 }
