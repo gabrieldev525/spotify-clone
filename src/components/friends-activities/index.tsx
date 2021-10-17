@@ -7,7 +7,6 @@ import { FiMusic } from 'react-icons/fi'
 
 // Local
 import { IFriendsActivitiesProps } from './types'
-import '../../styles/global.scss'
 import './styles/styles.scss'
 
 export default function FriendsActivities({friendsActivitiesImage, friendsActivitiesName, friendsActivitiesMusic, friendsActivitiesPlaylist}: IFriendsActivitiesProps) {
