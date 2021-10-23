@@ -11,6 +11,10 @@ import MusicCategory from '../../components/music-category'
 import './styles.scss'
 import PlayerMusic from '../../components/player-music'
 
+// Json
+import apiCardSearch from '../../services/apiCardSearch.json'
+import { map } from 'lodash'
+
 export default function Home() {
   const api = [
     {id: 1, name: 'Forró'},
@@ -36,6 +40,18 @@ export default function Home() {
     {id: 11, name: 'forro'},
     {id: 11, name: 'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd'},
   ]
+
+  const renderMusicCategory = () => {
+    return map(apiCardSearch, (card) => {
+      return (
+        <MusicCategory 
+          CategoryTitle={card.title}
+          CategoryImage={card.image} 
+          CategoryColor={card.color} 
+        />
+      )
+    })
+  }
 
   return (
     <div className='home-container'>
@@ -90,18 +106,7 @@ export default function Home() {
           <div className="category-container">
             <p className="category-container-title">Seus genêros favoritos</p>
             <div className="category-swiper">
-              <MusicCategory 
-              CategoryTitle="Funk"
-              CategoryImage="https://via.placeholder.com/150"
-              />
-              <MusicCategory 
-              CategoryTitle="Pop"
-              CategoryImage="https://via.placeholder.com/150"
-              />
-              <MusicCategory 
-              CategoryTitle="Rock"
-              CategoryImage="https://via.placeholder.com/150"
-              />
+              { renderMusicCategory() }
             </div>
           </div>
         </div>
