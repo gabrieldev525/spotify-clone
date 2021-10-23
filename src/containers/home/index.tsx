@@ -9,32 +9,52 @@ import SimpleListItem from '../../components/simple-list-item'
 // Local
 import './styles.scss'
 import PlayerMusic from '../../components/player-music'
+import TopMenu from '../../components/TopMenu'
 
 export default function Home() {
   const api = [
-    {id: 1, name: 'Forró'},
-    {id: 2, name: 'Froid'},
-    {id: 3, name: 'Tierry'},
-    {id: 4, name: 'forro'},
-    {id: 5, name: 'forro'},
-    {id: 6, name: 'forro'},
-    {id: 7, name: 'forro'},
-    {id: 8, name: 'forro'},
-    {id: 9, name: 'forro'},
-    {id: 10, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd'},
+    { id: 1, name: 'Forró' },
+    { id: 2, name: 'Froid' },
+    { id: 3, name: 'Tierry' },
+    { id: 4, name: 'forro' },
+    { id: 5, name: 'forro' },
+    { id: 6, name: 'forro' },
+    { id: 7, name: 'forro' },
+    { id: 8, name: 'forro' },
+    { id: 9, name: 'forro' },
+    { id: 10, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'forro' },
+    { id: 11, name: 'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd' },
   ]
+
+  const renderListMusic = () => {
+    let list = []
+
+    for (let i = 1; i <= 10; i++) {
+      list.push(
+        <SimpleListItem
+          key={i}
+          position={1}
+          musicName='Nome da música'
+          image={Image}
+          totalPlays='2,525,702'
+          timeDuration='2:27'
+          active={false} />
+      )
+    }
+
+    return list
+  }
 
   return (
     <div className='home-container'>
@@ -42,49 +62,10 @@ export default function Home() {
         <MenuSide data={api} />
 
         <div className='main-container'>
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27'
-            active={false} />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27'
-            active={false} />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
+          <TopMenu />
+          <div className='container_chidren'>
+            {renderListMusic()}
+          </div>
         </div>
       </div>
 

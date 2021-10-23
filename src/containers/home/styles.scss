@@ -7,13 +7,29 @@
     width: 100%;
     height: 100%;
 
-    .main-container {
-        width: 100%;
-        overflow-y: auto;
-    }
-
     .content-page {
-        height: calc(100% - $height-player-music);
         display: flex;
+        height: calc(100% - $height-player-music);
+
+        .main-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            .container_chidren {
+                overflow-y: auto;
+                overflow-x: hidden;
+                height: calc(100% - $height-menu-top);
+
+                &::-webkit-scrollbar {
+                    width: 7px;
+                }
+                &::-webkit-scrollbar-thumb {
+                    background-color: $color-gray-3;
+                    border-radius: 20px;
+                }
+            }
+        }
     }
 }
