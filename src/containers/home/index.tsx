@@ -5,6 +5,7 @@ import React from 'react'
 import Image from '../../static/images/music.jpeg'
 import MenuSide from '../../components/MenuSide'
 import SimpleListItem from '../../components/simple-list-item'
+import MusicCategory from '../../components/music-category'
 
 // Local
 import './styles.scss'
@@ -85,6 +86,24 @@ export default function Home() {
             image={Image}
             totalPlays='2,525,702'
             timeDuration='2:27' />
+
+          <div className="category-container">
+            <p className="category-container-title">Seus genêros favoritos</p>
+            <div className="category-swiper">
+              <MusicCategory 
+              CategoryTitle="Funk"
+              CategoryImage="https://via.placeholder.com/150"
+              />
+              <MusicCategory 
+              CategoryTitle="Pop"
+              CategoryImage="https://via.placeholder.com/150"
+              />
+              <MusicCategory 
+              CategoryTitle="Rock"
+              CategoryImage="https://via.placeholder.com/150"
+              />
+            </div>
+          </div>
         </div>
       </div>
 

@@ -1,0 +1,48 @@
+@import "../../../styles/variables.scss";
+
+
+.category-container {
+    padding-left: 24px;
+    font-size: 28px;
+    color: $color-white;
+    font-weight: bold; 
+
+    .category-swiper {
+        display: flex;
+        gap: 24px;
+        width: 100%;
+        max-width: 1200px;
+        padding-left: initial;
+        margin: 0;
+        overflow-x: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .music-category {
+            background-color: $color-green;
+            width: 100%;
+            min-width: 500px;
+            min-height: 300px;
+            border-radius: 8px;
+            padding: 24px 0 0 12px;
+            font-size: 32px;
+            font-weight: bold;
+            position: relative;
+            overflow: hidden;
+        
+            .music-cateogry-title {
+                color: $color-white;
+            }
+        
+            .music-category-image {
+                position: absolute;
+                right: -30px;
+                bottom: 0;
+                width: 150px;
+                height: 150px;
+                transform: rotate(30deg);
+            }
+        }
+    }         
+}
