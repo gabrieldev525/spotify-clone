@@ -10,13 +10,13 @@ import { IAlbumCardProps } from './types'
 
 export default function AlbumCard({artistName, artistImage}: IAlbumCardProps) {
   return (
-    <div className="album-card">
-      <div className="album-card-info">
-        <img className="album-card-image" src={artistImage} alt="artist album photo" />
-        <p className="album-card-name">{artistName}</p>
+    <div className='album-card'>
+      <div className='album-card-info'>
+        <img className='album-card-image' src={artistImage} alt='artist album photo' />
+        <p className='album-card-name'>{artistName}</p>
       </div>
-      <div className="play-album">
-        <div className="icon">
+      <div className='play-album'>
+        <div className='icon'>
             <IoPlaySharp />
         </div>
       </div>

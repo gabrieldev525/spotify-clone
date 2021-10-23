@@ -106,9 +106,9 @@ export default function Home() {
             totalPlays='2,525,702'
             timeDuration='2:27' />
 
-          <div className="category-container">
-            <p className="category-container-title">Seus genêros favoritos</p>
-            <div className="category-swiper">
+          <div className='category-container'>
+            <p className='category-container-title'>Seus genêros favoritos</p>
+            <div className='category-swiper'>
               { renderMusicCategory() }
             </div>
           </div>
