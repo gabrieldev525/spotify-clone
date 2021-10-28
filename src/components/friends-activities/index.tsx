@@ -11,17 +11,17 @@ import './styles/styles.scss'
 
 export default function FriendsActivities({friendsActivitiesImage, friendsActivitiesName, friendsActivitiesMusic, friendsActivitiesPlaylist}: IFriendsActivitiesProps) {
     return (
-      <div className="friends-activities">
-          <div className="friends-activities-top">
+      <div className='friends-activities'>
+          <div className='friends-activities-top'>
             <p>Atividades de Amigos </p>
             <IoPersonAddOutline />
           </div>
-          <div className="friends-activities-card">
-              <div className="friends-activities-media">
-                  <div className="is-active"></div>
-                <img src={friendsActivitiesImage} alt="friends activities card image" /> 
+          <div className='friends-activities-card'>
+              <div className='friends-activities-media'>
+                  <div className='is-active'></div>
+                <img src={friendsActivitiesImage} alt='friends activities card image' /> 
               </div>
-              <div className="friends-activities-content">
+              <div className='friends-activities-content'>
                   <p>{friendsActivitiesName}</p>
                   <p>{friendsActivitiesMusic}</p>
                   <p><FiMusic /> {friendsActivitiesPlaylist}</p>

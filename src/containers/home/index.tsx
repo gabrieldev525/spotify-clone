@@ -5,10 +5,18 @@ import React from 'react'
 import Image from '../../static/images/music.jpeg'
 import MenuSide from '../../components/MenuSide'
 import SimpleListItem from '../../components/simple-list-item'
+import MusicCategory from '../../components/music-category'
 
 // Local
 import './styles.scss'
 import PlayerMusic from '../../components/player-music'
+
+// Json
+import apiCardSearch from '../../services/apiCardSearch.json'
+
+
+// Third party
+import { map } from 'lodash'
 
 export default function Home() {
   const api = [
@@ -35,6 +43,18 @@ export default function Home() {
     {id: 11, name: 'forro'},
     {id: 11, name: 'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd'},
   ]
+
+  const renderMusicCategory = () => {
+    return map(apiCardSearch, (card) => {
+      return (
+        <MusicCategory 
+          CategoryTitle={card.title}
+          CategoryImage={card.image} 
+          CategoryColor={card.color} 
+        />
+      )
+    })
+  }
 
   return (
     <div className='home-container'>
@@ -85,6 +105,13 @@ export default function Home() {
             image={Image}
             totalPlays='2,525,702'
             timeDuration='2:27' />
+
+          <div className='category-container'>
+            <p className='category-container-title'>Seus genêros favoritos</p>
+            <div className='category-swiper'>
+              { renderMusicCategory() }
+            </div>
+          </div>
         </div>
       </div>
 
