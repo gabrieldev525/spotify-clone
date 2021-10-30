@@ -3,7 +3,7 @@
 .artist-banner {
     display: flex;
     gap: 24px;
-    padding: 36px 14px 14px;
+    padding: 2rem 3rem;
     border-radius: 4px;
     background: rgb(35,35,35);
     background: linear-gradient(60deg, rgba(35,35,35,1) 60%, rgba(255,255,255,0) 100%);
@@ -20,12 +20,8 @@
         }
 
         .artist-playlist-name {
-            font-size: 86px;
+            font-size: 6rem;
             font-weight: bold;
-
-            &:hover {
-                text-decoration: underline;
-            }
         }
 
         .artist-banner-actions {
