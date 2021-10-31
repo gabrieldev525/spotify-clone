@@ -8,6 +8,7 @@ import {
 // Project
 import Home from './containers/home'
 import ArtistDetail from './containers/artist-detail'
+import PageSearch from './containers/search'
 
 
 export default function Routes() {
@@ -16,6 +17,7 @@ export default function Routes() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/artist/:id/detail' exact component={ArtistDetail} />
+        <Route path='/search' exact component={PageSearch} />
       </Switch>
     </BrowserRouter>
   )

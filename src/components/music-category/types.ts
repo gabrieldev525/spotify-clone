@@ -1,5 +1,7 @@
 export interface IMusicCategory {
-    CategoryTitle: string,
-    CategoryImage: string,
-    CategoryColor: string,
+    title: string,
+    image: string,
+    color: string,
+    width?: number | string,
+    height?: number | string
 }

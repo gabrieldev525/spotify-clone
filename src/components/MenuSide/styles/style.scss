@@ -4,7 +4,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: $width-menu-side;
   height: 100%;
   padding-top: 1%;
   padding-left: 2%;
@@ -52,7 +52,7 @@
     padding-bottom: 2%;
     gap: 6px;
     width: 85%;
-    border-bottom: 1px solid #b9bbba;
+    border-bottom: 1px solid $color-border-playlist_collections;
 
     .content_all_playlist_collections {
       cursor: pointer;
@@ -82,7 +82,7 @@
       background-color: $color-gray-text;
     }
     .icon_like_music {
-      background: linear-gradient(135deg, #450af5, #c4efd9);
+      background: $color-icon-like-music;
     }
   }
 
@@ -92,14 +92,14 @@
     flex: 1;
 
     &::-webkit-scrollbar {
-      width: 10px;
+      width: 7px;
     }
     &::-webkit-scrollbar-thumb {
-      background-color: #4d4d4d;
-      transition: all 0.24s;
+      background-color: $color-scroll;
+      border-radius: 20px;
 
       &:hover {
-        background-color: #b9bbba;
+        background-color: $color-scroll-hover;
       }
     }
 
@@ -111,13 +111,14 @@
       width: 95%;
       color: $color-gray-text;
 
-      p {
+      .title_music {
         cursor: default;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         transition: 0.24;
         margin: 0;
+        color: $color-gray-text;
 
         &:hover {
           color: $color-white;

@@ -5,30 +5,30 @@ import React from 'react'
 import Image from '../../static/images/music.jpeg'
 import MenuSide from '../../components/MenuSide'
 import SimpleListItem from '../../components/simple-list-item'
-import MusicCategory from '../../components/music-category'
 
 // Local
 import './styles.scss'
 import PlayerMusic from '../../components/player-music'
-
-// Json
-import apiCardSearch from '../../services/apiCardSearch.json'
-
-
-// Third party
-import { map } from 'lodash'
+import TopMenu from '../../components/TopMenu'
 
 export default function Home() {
-  const renderMusicCategory = () => {
-    return map(apiCardSearch, (card) => {
-      return (
-        <MusicCategory 
-          CategoryTitle={card.title}
-          CategoryImage={card.image} 
-          CategoryColor={card.color} 
-        />
+  const renderListMusic = () => {
+    let list = []
+
+    for (let i = 1; i <= 10; i++) {
+      list.push(
+        <SimpleListItem
+          key={i}
+          position={1}
+          musicName='Nome da música'
+          image={Image}
+          totalPlays='2,525,702'
+          timeDuration='2:27'
+          active={false} />
       )
-    })
+    }
+
+    return list
   }
 
   return (
@@ -37,55 +37,10 @@ export default function Home() {
         <MenuSide />
 
         <div className='main-container'>
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27'
-            active={false} />
+          <TopMenu />
 
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27'
-            active={false} />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
-
-          <SimpleListItem
-            position={1}
-            musicName='Nome da música'
-            image={Image}
-            totalPlays='2,525,702'
-            timeDuration='2:27' />
-
-          <div className='category-container'>
-            <p className='category-container-title'>Seus genêros favoritos</p>
-            <div className='category-swiper'>
-              { renderMusicCategory() }
-            </div>
+          <div className='container_chidren'>
+            {renderListMusic()}
           </div>
         </div>
       </div>
