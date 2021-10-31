@@ -23,11 +23,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 ## 🚀 Como executar
 
 - Clone o repositório
-- (`usando yarn`)Instale as dependências com `yarn`
-- (`usando yarn`)Inicie o servidor com `yarn start`
+- (`usando yarn`) Instale as dependências com `yarn`
+- (`usando yarn`) Inicie o servidor com `yarn start`
 #### OU
-- (`usando npm`)Instale as dependências com `npm install`
-- (`usando npm`)Inicie o servidor com `npm run start`
+- (`usando npm`) Instale as dependências com `npm install`
+- (`usando npm`) Inicie o servidor com `npm run start`
 
 ### Acessando o projeto no *browser*
 Agora você pode acessar [`localhost:3000`](http://localhost:3000) do seu navegador.
