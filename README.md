@@ -18,7 +18,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
- ### Um app para você escutar as suas melhores músicas e fazer a sua playlist de acordo com as suas melhores músicas.
+ ### Um app para você escutar as suas melhores músicas e fazer a sua playlist de acordo com as que você mais ama.
 
 ## 🚀 Como executar
 
