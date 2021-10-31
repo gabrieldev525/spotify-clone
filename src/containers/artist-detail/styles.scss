@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.artist-detail-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-title {
+  color: $color-white;
+  font-size: 1.5rem;
+  margin: 3rem 1rem 1rem;
+  font-weight: bold;
+}
+
+.popular-releases {
+  display: flex;
+}

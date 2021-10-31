@@ -19,31 +19,6 @@ import apiCardSearch from '../../services/apiCardSearch.json'
 import { map } from 'lodash'
 
 export default function Home() {
-  const api = [
-    {id: 1, name: 'Forró'},
-    {id: 2, name: 'Froid'},
-    {id: 3, name: 'Tierry'},
-    {id: 4, name: 'forro'},
-    {id: 5, name: 'forro'},
-    {id: 6, name: 'forro'},
-    {id: 7, name: 'forro'},
-    {id: 8, name: 'forro'},
-    {id: 9, name: 'forro'},
-    {id: 10, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'forro'},
-    {id: 11, name: 'asdasdasdasdasdasdasdasdasdasdasdasdasdasdasd'},
-  ]
-
   const renderMusicCategory = () => {
     return map(apiCardSearch, (card) => {
       return (
@@ -59,7 +34,7 @@ export default function Home() {
   return (
     <div className='home-container'>
       <div className='content-page'>
-        <MenuSide data={api} />
+        <MenuSide />
 
         <div className='main-container'>
           <SimpleListItem
