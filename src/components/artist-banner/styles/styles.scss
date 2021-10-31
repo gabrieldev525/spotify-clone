@@ -1,0 +1,60 @@
+@import '../../../styles/variables.scss';
+
+.artist-banner {
+    display: flex;
+    gap: 24px;
+    padding: 2rem 3rem;
+    border-radius: 4px;
+    background: rgb(35,35,35);
+    background: linear-gradient(60deg, rgba(35,35,35,1) 60%, rgba(255,255,255,0) 100%);
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .artist-banner-content {
+        
+        p {
+            color: $color-white;
+        }
+
+        .artist-playlist-name {
+            font-size: 6rem;
+            font-weight: bold;
+        }
+
+        .artist-banner-actions {
+            display: flex;
+            gap: 20px;
+            padding-top: 12px;
+
+            .artist-banner-button {
+                width: auto;
+                min-width: 100px;
+                height: 36px;
+                padding: 8px 12px;
+                border-radius: 50px;
+                border: none;
+                outline: none;
+                color: $color-white;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover {
+                    min-width: 105px;
+                    height: 38px;
+                }
+
+                &.play {
+                    background-color: $color-green; 
+                }
+
+                &.follow {
+                    background-color: transparent;
+                    border: 1px solid gray;
+                }
+            }
+        }
+    }
+}

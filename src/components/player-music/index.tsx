@@ -55,7 +55,7 @@ const PlayerMusic = ({
           <span>{currentMusicTime}</span>
           <Line
             percent={10}
-            strokeColor="#FFF"
+            strokeColor='#FFF'
             trailColor='#535353'
             className='progress-bar' />
           <span>{totalMusicTime}</span>
@@ -69,7 +69,7 @@ const PlayerMusic = ({
 
         <Line
           percent={10}
-          strokeColor="#FFF"
+          strokeColor='#FFF'
           trailColor='#535353'
           className='progress-bar' />
 

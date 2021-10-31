@@ -111,13 +111,14 @@
       width: 95%;
       color: $color-gray-text;
 
-      p {
+      .title_music {
         cursor: default;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         transition: 0.24;
         margin: 0;
+        color: $color-gray-text;
 
         &:hover {
           color: $color-white;

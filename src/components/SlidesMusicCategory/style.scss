@@ -1,0 +1,9 @@
+@import '../../styles/variables.scss';
+
+.react-multiple-carousel__arrow {
+  background-color: $color-white !important;
+}
+
+.react-multiple-carousel__arrow::before {
+  color: $color-gray-3 !important;
+}

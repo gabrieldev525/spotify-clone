@@ -1,6 +1,5 @@
 @import '../../styles/variables.scss';
 
-
 .home-container {
   display: flex;
   flex-direction: column;
@@ -20,7 +19,26 @@
       .container_chidren {
         overflow-y: auto;
         overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        padding-left: .5rem;
         height: calc(100% - $height-menu-top);
+
+        .container_slide {
+          width: 100%;
+        }
+
+        .category-container-title {
+          color: $color-white;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+
+        .category-container {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 17px;
+        }
 
         &::-webkit-scrollbar {
           width: 7px;

@@ -18,12 +18,17 @@ import { FiLogOut, FiSearch } from 'react-icons/fi'
 
 // Local
 import './styles/styles.scss'
+import { useLocation } from 'react-router'
 
 export default function TopMenu() {
+  // Hook
+  const { pathname } = useLocation()
+
   // State
   const [isShowMoreOptions, setIsShowMoreOptions] = useState(false)
-  const [isComponentSearch, setIsComponentSearch] = useState(false)
-  const [isComponentLibrary, setIsComponentLibrary] = useState(false)
+  const [isComponentSearch, setIsComponentSearch] = useState(pathname == '/search' ? true : false)
+  const [isComponentLibrary, setIsComponentLibrary] = useState(pathname == '/library' ? true : false)
+
 
   const onClickMoreOptions = () => {
     setIsShowMoreOptions(!isShowMoreOptions)

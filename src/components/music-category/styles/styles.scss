@@ -1,0 +1,28 @@
+@import '../../../styles/variables.scss';
+
+.music-category {
+  overflow: hidden;
+  position: relative;
+  width: 230px;
+  height: 230px;
+  padding: 0px .6rem;
+  border-radius: 8px;
+  background-color: red;
+
+  .music-cateogry-title {
+    position: relative;
+    z-index: 1;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-white;
+  }
+
+  .music-category-image {
+    position: absolute;
+    right: -16px;
+    bottom: -6px;
+    width: 110px;
+    height: 110px;
+    transform: rotate(25deg);
+  }
+}
